@@ -1,0 +1,16 @@
+﻿<Window x:Class="BusinessCal.MainWindow" xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:d="http://schemas.microsoft.com/expression/blend/2008" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:local="clr-namespace:BusinessCal" mc:Ignorable="d" Title="MainWindow" Height="450" Width="530" MinHeight="450" MinWidth="530" Background="#FDFFFFFF">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="61*"/>
+            <ColumnDefinition Width="408*"/>
+            <ColumnDefinition Width="61*"/>
+        </Grid.ColumnDefinitions>
+        <Frame x:Name="itemsFrame" Content="" Grid.ColumnSpan="3" NavigationUIVisibility="Hidden" Height="367" VerticalAlignment="Top" Margin="10,67,10,0"/>
+        <Button x:Name="nextBtn" Grid.Column="2" Content=">" BorderBrush="{x:Null}" Background="{x:Null}" Click="nextBtn_Click" Height="52" VerticalAlignment="Top"/>
+        <Button x:Name="prevBtn" Content="&lt;" Background="{x:Null}" BorderBrush="{x:Null}" Click="prevBtn_Click" Height="52" VerticalAlignment="Top"/>
+        <DatePicker x:Name="datePicker" Grid.Column="1" HorizontalAlignment="Center" Margin="0,14,0,0" VerticalAlignment="Top" Width="388" SelectedDateChanged="datePicker_SelectedDateChanged"/>
+    </Grid>
+</Window>
